@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Omkar Rambadey</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">Omkar Rambadey</a>
+    <div class="nav-links">
+      <a href="/research.html">Research</a>
+      <a href="/publications.html">Publications</a>
+      <a href="/cv.html">CV</a>
+      <a href="/contact.html">Contact</a>
+      <button id="theme-toggle-3" aria-label="Toggle light/dark">🌓</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Publications</h1>
+    <p>Below is a dynamically generated list from the `data/publications.bib` file.</p>
+
+    <div id="pub-list"></div>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year-3"></span> Omkar Rambadey</p>
+  </footer>
+
+  <!-- bibtex parser from CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/orcid/bibtexParseJs@master/bibtexParse.js"></script>
+  <script src="/js/publications.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>
