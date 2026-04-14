@@ -18,6 +18,12 @@
 body {
   font-family: var(--font-main);
   line-height: 1.7; /* Increased for better readability */
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* Add a subtle glow to cards in dark mode */
+[data-theme='dark'] .card, [data-theme='dark'] .pub {
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
 
 h1, h2, h3, .pub .title {
