@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Tools | Omkar Rambadey</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        .tool-section { margin-top: 3rem; border-top: 1px solid var(--muted); padding-top: 2rem; }
+        .py-input-group { display: flex; gap: 10px; margin: 1rem 0; align-items: center; }
+        input[type="number"] { padding: 0.5rem; border-radius: 5px; border: 1px solid var(--muted); background: var(--card); color: var(--text); }
+        #calc-btn { padding: 0.5rem 1rem; cursor: pointer; background: var(--text); color: var(--bg); border: none; border-radius: 5px; font-weight: bold; }
+        #calc-btn:hover { opacity: 0.8; }
+        #output-box { margin-top: 1rem; padding: 1rem; border-left: 4px solid #3b82f6; background: var(--card); min-height: 50px; }
+    </style>
+</head>
+<body>
+
+
+    <nav class="nav">
+        <a class="brand" href="/">Omkar Rambadey</a>
+        <div class="nav-links">
+            <a href="/research.html">Research</a>
+            <a href="/publications.html">Publications</a>
+            <a href="notes.html">Notes</a>
+            <a href="/cv.html">CV</a>
+            <a href="/contact.html">Contact</a>
+            <a href="./activity.html">Activity</a>
+            <a href="./tools.html">Tools</a>
+            <!-- <button id="theme-toggle" aria-label="Toggle light/dark">🌓</button> -->
+            <button id="theme-toggle" style="cursor:pointer; background:none; border:none; color:var(--muted);">🌓</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Interactive Research Tools</h1>
+            <p class="muted">A collection of open-source utilities for X-ray scattering and data visualization. These tools run locally in the browser using Python (PyScript).</p>
+        </header>
+
+        <section class="tool-section">
+            <h2>1. Ewald Sphere Calculator</h2>
+            <p>This tool calculates the radius of the Ewald sphere based on the incident X-ray wavelength \( \lambda \). In reciprocal space, the radius \( R \) is defined as:</p>
+            \[ R = \frac{1}{\lambda} \]
+            
+            <div class="card">
+                <div class="py-input-group">
+                    <label for="wavelength">Wavelength (\(\text{\AA}\)):</label>
+                    <input type="number" id="wavelength" step="0.0001" placeholder="e.g. 1.5406">
+                    <button id="calc-btn">Calculate Radius</button>
+                </div>
+
+                <div id="output-box">
+                    <span id="output-text">Enter a value and click calculate...</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="tool-section">
+            <h2>2. Future Python GUIs</h2>
+            <p>I am currently porting my desktop GUIs (Tkinter/PyQt) to the web. Upcoming features include:</p>
+            <ul>
+                <li><strong>Reciprocal Space Mapper:</strong> Visualize \( (hkl) \) planes relative to the Ewald sphere.</li>
+                <li><strong>Unit Cell Converter:</strong> Transition between real space lattice parameters and reciprocal lattice constants.</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; <span id="year"></span> | Research Tools Portfolio</p>
+        </footer>
+    </div>
+
+    <script type="py">
+        from pyscript import document
+
+        def calculate_radius(event):
+            # Get the input value
+            w_input = document.querySelector("#wavelength").value
+            output_element = document.querySelector("#output-text")
+            
+            if not w_input:
+                output_element.innerText = "Please enter a valid wavelength."
+                return
+
+            try:
+                wavelength = float(w_input)
+                if wavelength <= 0:
+                    output_element.innerText = "Wavelength must be greater than zero."
+                else:
+                    # R = 1 / lambda
+                    radius = 1 / wavelength
+                    output_element.innerHTML = f"The Ewald Sphere Radius is: <strong>{radius:.5f} Å⁻¹</strong>"
+            except ValueError:
+                output_element.innerText = "Invalid input. Please enter a number."
+
+        # Bind the function to the button click
+        document.querySelector("#calc-btn").onclick = calculate_radius
+    </script>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

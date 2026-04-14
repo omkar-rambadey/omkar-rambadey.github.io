@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity & News | Omkar Rambadey</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a class="brand" href="index.html">Omkar Rambadey</a>
+    <div class="nav-links">
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="notes.html">Notes</a>
+      <a href="cv.html">CV</a>
+      <a href="activity.html" style="font-weight:bold;">Activity</a>
+      <a href="tools.html">Tools</a>
+      <button id="theme-toggle" style="cursor:pointer; background:none; border:none; color:var(--muted);">🌓</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <header style="margin-bottom: 3rem;">
+        <h1>Activity & News</h1>
+        <p class="muted">Recent updates, conference highlights, and academic milestones.</p>
+    </header>
+
+    <div class="news-feed">
+        <article class="news-card">
+            <div class="news-date">Feb 2024</div>
+            <div class="news-content">
+                <h3>Started Postdoc at MPSD</h3>
+                <p>Joined the Computational Nanoscale Imaging Group at the Max Planck Institute for the Structure and Dynamics of Matter in Hamburg.</p>
+                <img src="https://via.placeholder.com/800x400" alt="MPSD Hamburg" class="news-img">
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-date">Dec 2023</div>
+            <div class="news-content">
+                <h3>Ph.D. Defense Successful</h3>
+                <p>I successfully defended my thesis on <em>"Role of electronic and lattice dynamical correlation in semiconductors"</em> at IIT Indore. Many thanks to my committee and colleagues.</p>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <div class="news-date">Dec 2024</div>
+            <div class="news-content">
+                <h3>New Publication in PRB</h3>
+                <p>Our paper on temperature dependence of disorder sensitivity is now out in <strong>Physical Review B</strong>. We explored phonon modes in finite-gap materials.</p>
+                <div class="plot-container">
+                    <img src="https://via.placeholder.com/600x300" alt="Scientific Plot" class="news-img">
+                    <p class="caption">Figure: Evolution of Raman line shape under laser perturbation.</p>
+                </div>
+            </div>
+        </article>
+    </div>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
