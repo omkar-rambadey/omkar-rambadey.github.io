@@ -65,8 +65,13 @@
   doi={${tags.doi || ''}}
 }`;
 
+      // Check if first author (Omkar)
+      const isFirstAuthor = authors.startsWith('<span class="me-author">Omkar'); // Update the innerHTML to include the badg
+      const firstAuthorBadge = isFirstAuthor ? `<span class="badge badge-first">First Author</span>` : '';
       const pubDiv = document.createElement('div');
       pubDiv.className = 'pub';
+        // replace this title like to show the first author badge
+        // <div class="title">${displayTitle} ${firstAuthorBadge}</div>
       pubDiv.innerHTML = `
         <div class="title">${displayTitle}</div>
         <div class="meta">${authors} <br> <span class="muted"><em>${journal}</em> (${year})</span></div>

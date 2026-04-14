@@ -11,3 +11,11 @@
 
   document.querySelectorAll('[id^=theme-toggle]').forEach(btn=> btn.addEventListener('click', toggleTheme));
 })();
+// Highlight active navigation link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  if (link.href === window.location.href) {
+    link.style.color = 'var(--text)';
+    link.style.fontWeight = 'bold';
+    link.style.borderBottom = '2px solid var(--text)';
+  }
+});
