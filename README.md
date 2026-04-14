@@ -1,6 +1,6 @@
 # Hi there, I'm Omkar Rambadey 👋
 
-### Postdoctoral Researcher | Experimental & Computational Condensed Matter Physics
+### Postdoctoral Researcher | Experimental Condensed Matter Physics
 
 I specialize in investigating **ultrafast structural and electronic dynamics** in quantum materials and semiconductors using advanced X-ray scattering and spectroscopic techniques. Currently, I am a Postdoc at the **Max Planck Institute for the Structure and Dynamics of Matter (MPSD)**, Hamburg.
 
@@ -14,18 +14,27 @@ I specialize in investigating **ultrafast structural and electronic dynamics** i
 
 ---
 
-### 🛠️ Technical Toolkit
+### 🛠️ Technical Skills
 
-- **Languages:** Python (NumPy, SciPy, Matplotlib), C++, LaTeX.
-- **X-Ray Tools:** [Mention specific software you use, e.g., PyFAI, Dioptas, or custom mapping tools].
-- **Instruments:** Synchrotron & XFEL experience, Raman Spectroscopy, Optical Pump-Probe.
+- **Instruments:**
+  - Synchrotron & XFEL beamtime experience
+  - Time Resolved Pump-Probe Experiments
+  - Raman Spectroscopy
+  - Optical Absorption Spectroscopy / Diffuse Reflectance Spectroscopy
+  - Scanning Electron Microscopy
+  - Material Synthesis (routes: sol-gel, solid state, hydrothermal)
+- **Languages:** Python (NumPy, SciPy, Matplotlib), HTML, LaTeX.
 
 ---
 
-### 📊 Recent Activity & Publications
 
-- 📝 **Latest Paper:** *Temperature dependence of disorder sensitivity of phonon modes in finite-gap materials* (Phys. Rev. B, 2024).
-- 🛠️ **Active Project:** Porting X-ray scattering GUIs to the web using PyScript.
+### 💻 Data & Computational Skills
+
+- **Big Data Handling:** Experience in processing and reducing large-scale experimental datasets (Terabyte-scale) from XFEL and Synchrotron sources.
+- **HPC Systems:** Proficient in deploying parallelized data analysis pipelines on High-Performance Computing clusters (SLURM, multi-node processing).
+- **Scientific Programming:** Expert in Python (NumPy, SciPy, Matplotlib) for instrumentation control and data visualization.
+- **Monte Carlo Methods**
+- **Open Source:** Developing scientific tools using Python for the wider community.
 
 ---
 
